@@ -1,10 +1,11 @@
 package main
 
 import (
-	"ccxt_beyang/rest"
-	restconsts "ccxt_beyang/rest/consts"
-	restrequest "ccxt_beyang/rest/request"
 	"time"
+
+	"github.com/TestingAccMar/CCXT_beYANG/rest"
+	restconsts "github.com/TestingAccMar/CCXT_beYANG/rest/consts"
+	restrequest "github.com/TestingAccMar/CCXT_beYANG/rest/request"
 
 	"log"
 )

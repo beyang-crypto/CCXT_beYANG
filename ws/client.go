@@ -7,6 +7,7 @@ import (
 	binance "github.com/TestingAccMar/CCXT_beYANG_Binance/binance/ws"
 	bybit "github.com/TestingAccMar/CCXT_beYANG_ByBit/bybit/spot/v3/ws"
 	ftx "github.com/TestingAccMar/CCXT_beYANG_FTX/ftx/ws"
+	gate "github.com/TestingAccMar/CCXT_beYANG_Gate/gate/spotAndMargin/v4/ws"
 	okx "github.com/TestingAccMar/CCXT_beYANG_OKX/okx/ws"
 	"github.com/chuckpreslar/emission"
 )
@@ -61,15 +62,14 @@ func NewExchange(exWs ExchangeWS) EchangeInterface {
 			DebugMode:      exWs.DebugMode,
 		}
 		ex = okx.New(cfg)
-	case "okx":
-		cfg := &okx.Configuration{
-			Addr:           exWs.Addr,
-			ApiKey:         exWs.ApiKey,
-			SecretKey:      exWs.SecretKey,
-			APIKeyPassword: exWs.APIKeyPassword,
-			DebugMode:      exWs.DebugMode,
+	case "gate":
+		cfg := &gate.Configuration{
+			Addr:      exWs.Addr,
+			ApiKey:    exWs.ApiKey,
+			SecretKey: exWs.SecretKey,
+			DebugMode: exWs.DebugMode,
 		}
-		ex = okx.New(cfg)
+		ex = gate.New(cfg)
 	default:
 		log.Printf(`
 		{

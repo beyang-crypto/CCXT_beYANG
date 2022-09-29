@@ -7,4 +7,5 @@ import (
 func GateTickers(data interface{}) gate.Tickers {
 	t, _ := data.(gate.Tickers)
 	return t
+
 }
