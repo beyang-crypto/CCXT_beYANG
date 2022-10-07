@@ -1,7 +1,7 @@
 package request
 
 import (
-	ftxWs "github.com/TestingAccMar/CCXT_beYANG_FTX/ftx/ws"
+	ftxWs "github.com/TestingAccMar/CCXT_beYANG_FTX/ftx/spot/ws"
 )
 
 func FTXTicker(data interface{}) ftxWs.Ticker {

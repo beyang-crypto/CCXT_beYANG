@@ -6,7 +6,7 @@ import (
 
 	binanceRest "github.com/TestingAccMar/CCXT_beYANG_Binance/binance/rest"
 	bybitRest "github.com/TestingAccMar/CCXT_beYANG_ByBit/bybit/spot/v3/rest"
-	ftxRest "github.com/TestingAccMar/CCXT_beYANG_FTX/ftx/rest"
+	ftxRest "github.com/TestingAccMar/CCXT_beYANG_FTX/ftx/spot/rest"
 	okxRest "github.com/TestingAccMar/CCXT_beYANG_OKX/okx/rest"
 )
 

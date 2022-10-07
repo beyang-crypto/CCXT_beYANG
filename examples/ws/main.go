@@ -21,7 +21,7 @@ func main() {
 	ws.Start(okxEx)
 
 	pairOKX := ws.GetPair(okxEx, "BTC", "USDT")
-	ws.Subscribe(okxEx, wsconsts.OKXChannelTicker, pairOKX)
+	ws.Subscribe(okxEx, wsconsts.OKXChannelTicker, []string{pairOKX})
 
 	ws.On(okxEx, wsconsts.OKXChannelTicker, handleBookTickerOKX)
 

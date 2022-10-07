@@ -6,7 +6,7 @@ import (
 
 	binance "github.com/TestingAccMar/CCXT_beYANG_Binance/binance/ws"
 	bybit "github.com/TestingAccMar/CCXT_beYANG_ByBit/bybit/spot/v3/ws"
-	ftx "github.com/TestingAccMar/CCXT_beYANG_FTX/ftx/ws"
+	ftx "github.com/TestingAccMar/CCXT_beYANG_FTX/ftx/spot/ws"
 	gate "github.com/TestingAccMar/CCXT_beYANG_Gate/gate/spotAndMargin/v4/ws"
 	okx "github.com/TestingAccMar/CCXT_beYANG_OKX/okx/ws"
 	"github.com/chuckpreslar/emission"
@@ -82,8 +82,8 @@ func NewExchange(exWs ExchangeWS) EchangeInterface {
 }
 
 type EchangeInterface interface {
-	Subscribe(args ...string)
-	GetPair(coin1 string, coin2 string) string
+	Subscribe(channel string, args []string)
+	GetPair(args ...string) string
 	Start() error
 
 	On(event interface{}, listener interface{}) *emission.Emitter
@@ -99,9 +99,8 @@ func Start(ex EchangeInterface) {
 	ex.Start()
 }
 
-func Subscribe(ex EchangeInterface, args ...string) {
-	log.Printf("%d", len(args))
-	ex.Subscribe(args...)
+func Subscribe(ex EchangeInterface, channel string, args []string) {
+	ex.Subscribe(channel, args)
 }
 
 func On(ex EchangeInterface, event interface{}, listener interface{}) *emission.Emitter {

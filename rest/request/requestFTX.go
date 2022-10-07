@@ -1,7 +1,7 @@
 package request
 
 import (
-	ftxRest "github.com/TestingAccMar/CCXT_beYANG_FTX/ftx/rest"
+	ftxRest "github.com/TestingAccMar/CCXT_beYANG_FTX/ftx/spot/rest"
 )
 
 func FTXToWalletBalance(data interface{}) ftxRest.WalletBalance {
