@@ -52,6 +52,8 @@ github.com/TestingAccMar/CCXT_beYANG_Gate v0.0.0-20221008120121-2ae92ccb5c2f h1:
 github.com/TestingAccMar/CCXT_beYANG_Gate v0.0.0-20221008120121-2ae92ccb5c2f/go.mod h1:jyZKbxeKNvqRt/INAYwPLBEbXYWKoeTSX3DXRqP5OFk=
 github.com/TestingAccMar/CCXT_beYANG_Gate v0.0.0-20221009145355-00a1a6ff49ad h1:Qd7MqTlNTEOgRbeJ6MLI4zU/w7xBj59RRWK4PtYN70M=
 github.com/TestingAccMar/CCXT_beYANG_Gate v0.0.0-20221009145355-00a1a6ff49ad/go.mod h1:jyZKbxeKNvqRt/INAYwPLBEbXYWKoeTSX3DXRqP5OFk=
+github.com/TestingAccMar/CCXT_beYANG_Gate v0.0.0-20221009175135-cf1c48412dcc h1:t3Zzb8wGOOXu0arwAjKML8EmLt+CpP/TvfACuJ9WJdU=
+github.com/TestingAccMar/CCXT_beYANG_Gate v0.0.0-20221009175135-cf1c48412dcc/go.mod h1:jyZKbxeKNvqRt/INAYwPLBEbXYWKoeTSX3DXRqP5OFk=
 github.com/TestingAccMar/CCXT_beYANG_OKX v0.0.0-20220927213436-79d39a20161b h1:Pi2S7jKN+N6J/PrZdprbXr81dnayCg2xWGbbr+kpSaU=
 github.com/TestingAccMar/CCXT_beYANG_OKX v0.0.0-20220927213436-79d39a20161b/go.mod h1:zz9xsoHc3Fi9nc5eUYiPmmyntoXRzPz/o+UUspBZ2+s=
 github.com/TestingAccMar/CCXT_beYANG_OKX v0.0.0-20220927214313-27a033314795 h1:MVX1HDP9qpGRnOfQmKL/6ytV1HxAfruSEh0Vm5grmpo=

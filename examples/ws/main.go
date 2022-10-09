@@ -1,6 +1,8 @@
 package main
 
 import (
+	"strconv"
+
 	"github.com/TestingAccMar/CCXT_beYANG/ws"
 	wsconsts "github.com/TestingAccMar/CCXT_beYANG/ws/consts"
 	wsrequest "github.com/TestingAccMar/CCXT_beYANG/ws/request"
@@ -116,8 +118,9 @@ func handleBookTicker(name string, symbol string, data interface{}) {
 	case "Gate":
 		{
 			ticker, ok := wsrequest.GateTickers(data)
+			bbp, _ := strconv.ParseFloat(ticker.Result.HighestBid, 64)
 			if ok {
-				log.Printf("%s Ticker  %s: %v", name, symbol, ticker.Result.HighestBid)
+				log.Printf("%s Ticker  %s: %f", name, symbol, bbp)
 			}
 		}
 	}
