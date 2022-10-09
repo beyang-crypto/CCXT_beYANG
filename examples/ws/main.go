@@ -10,26 +10,35 @@ import (
 
 func main() {
 	exFTX := ws.ExchangeWS{
-		Name:      "OKX",
-		Addr:      wsconsts.OKXHostPublicWebSocket,
+		Name:      "binance",
+		Addr:      wsconsts.BinanceHostMainnetPublicTopics,
 		ApiKey:    "",
 		SecretKey: "",
-		DebugMode: true,
+		DebugMode: false,
 	}
 
-	okxEx := ws.NewExchange(exFTX)
-	ws.Start(okxEx)
+	binanceEx := ws.NewExchange(exFTX)
+	ws.Start(binanceEx)
 
-	pairOKX := ws.GetPair(okxEx, "BTC", "USDT")
-	ws.Subscribe(okxEx, wsconsts.OKXChannelTicker, []string{pairOKX})
+	pairOKX := ws.GetPair(binanceEx, "BTC", "USDT")
+	ws.Subscribe(binanceEx, wsconsts.BinanceChannelTicker, []string{pairOKX})
 
-	ws.On(okxEx, wsconsts.OKXChannelTicker, handleBookTickerOKX)
+	ws.On(binanceEx, wsconsts.BinanceChannelTicker, handleBookTickerBinace)
 
 	forever := make(chan struct{})
 	<-forever
 }
 
 func handleBookTickerOKX(symbol string, data interface{}) {
-	aa := wsrequest.OKXTickers(data)
-	log.Printf("OKX Ticker  %s: %v", symbol, aa.Data[0].BidPx)
+	aa, ok := wsrequest.OKXTickers(data)
+	if ok {
+		log.Printf("OKX Ticker  %s: %v", symbol, aa.Data[0].BidPx)
+	}
+}
+
+func handleBookTickerBinace(symbol string, data interface{}) {
+	aa, ok := wsrequest.BinanceToBookTicker(data)
+	if ok {
+		log.Printf("Binance Ticker  %s: %v", symbol, aa.B)
+	}
 }
