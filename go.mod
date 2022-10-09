@@ -3,11 +3,11 @@ module github.com/TestingAccMar/CCXT_beYANG
 go 1.18
 
 require (
-	github.com/TestingAccMar/CCXT_beYANG_Binance v0.0.0-20221007142021-866cc8e1884a
-	github.com/TestingAccMar/CCXT_beYANG_ByBit v0.0.0-20221007141926-90dea03b3391
-	github.com/TestingAccMar/CCXT_beYANG_FTX v0.0.0-20221007142109-a81d7c56ecd1
-	github.com/TestingAccMar/CCXT_beYANG_Gate v0.0.0-20221007142332-6be51d853408
-	github.com/TestingAccMar/CCXT_beYANG_OKX v0.0.0-20221007142240-7a9926f2b982
+	github.com/TestingAccMar/CCXT_beYANG_Binance v0.0.0-20221009145209-4022ae69b629
+	github.com/TestingAccMar/CCXT_beYANG_ByBit v0.0.0-20221009145104-88590cc3dc95
+	github.com/TestingAccMar/CCXT_beYANG_FTX v0.0.0-20221009145241-f1b18c9d657e
+	github.com/TestingAccMar/CCXT_beYANG_Gate v0.0.0-20221009145355-00a1a6ff49ad
+	github.com/TestingAccMar/CCXT_beYANG_OKX v0.0.0-20221009145322-eb36edee7c35
 	github.com/chuckpreslar/emission v0.0.0-20170206194824-a7ddd980baf9
 	github.com/testingaccmar/ccxt_beyang_bybit v0.0.0-20220926125509-2b99eed156fb
 )

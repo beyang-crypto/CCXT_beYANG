@@ -91,8 +91,8 @@ type EchangeInterface interface {
 	Off(event interface{}, listener interface{}) *emission.Emitter
 }
 
-func GetPair(ex EchangeInterface, coin1 string, coin2 string) string {
-	return ex.GetPair(coin1, coin2)
+func GetPair(ex EchangeInterface, args ...string) string {
+	return ex.GetPair(args...)
 }
 
 func Start(ex EchangeInterface) {
