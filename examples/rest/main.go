@@ -15,8 +15,8 @@ func main() {
 	exResOKX := rest.ExchangeRest{
 		Name:           "OKX",
 		Addr:           restconsts.OKXRestURL,
-		ApiKey:         "da092be5-da8f-4268-a786-f2dbd296dc27",
-		SecretKey:      "3602F5C69EBCC49BE99C4F31EB1D11B7",
+		ApiKey:         "",
+		SecretKey:      "",
 		APIKeyPassword: "Pravdavsile/1",
 		DebugMode:      true,
 	}
