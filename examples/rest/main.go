@@ -17,7 +17,7 @@ func main() {
 		Addr:           restconsts.OKXRestURL,
 		ApiKey:         "",
 		SecretKey:      "",
-		APIKeyPassword: "Pravdavsile/1",
+		APIKeyPassword: "",
 		DebugMode:      true,
 	}
 
